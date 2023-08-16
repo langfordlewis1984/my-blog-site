@@ -26,13 +26,13 @@ export default function PostPage({ params }: PostParams) {
       <article className="bg-red-500 border-2 border-red-700 flex p-6 rounded-lg shadow-md gap-8">
         <h2 className="text-3xl font-semibold mb-4 ">{post?.title}</h2>
         <p>{post?.content}</p>
-        <Image
+        {/* <Image
           src={post?.img_url}
           alt={post?.img_url}
           layout="responsive"
           width={100}
           height={100}
-        />
+        /> */}
         <p className="text-gray-600 mt-4">Date: {post?.date}</p>
       </article>
     </div>
