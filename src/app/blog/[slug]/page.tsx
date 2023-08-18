@@ -37,9 +37,14 @@ export default async function IndividualPostPage({ params }: BlogPostParams) {
 
   return (
     <div className="px-4 py-8 md:px-8">
-      <article className="bg-red-500 border-2 border-red-700 flex p-6 rounded-lg shadow-md gap-8">
-        <h2 className="text-3xl font-semibold mb-4 ">{post.title}</h2>
-        <p>{post.content}</p>
+      <article className="bg-red-500 border-2 border-red-700 p-6 rounded-lg shadow-md gap-8">
+        <h2 className="text-3xl font-semibold mb-4 max-w-lg  text-green-900">
+          {post.title}
+        </h2>
+        <div
+          dangerouslySetInnerHTML={{ __html: post.body.html }}
+          className="mb-8 max-w-lg"
+        ></div>
         <Image
           src={post.img_url}
           alt={post.img_url}

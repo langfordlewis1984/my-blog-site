@@ -9,6 +9,8 @@ export default function Home() {
           backgroundImage: `url(${Blogzilla.src})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          maxWidth: "1020px",
+          width: "100%",
         }}
       ></div>
       <div className="relative z-10 text-center">
