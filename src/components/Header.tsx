@@ -15,10 +15,16 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/posts"
+            href="/blog"
             className="hover:text-gray-300 transition-colors duration-300"
           >
-            Posts
+            Blog
+          </Link>
+          <Link
+            href="/blog/categories"
+            className="hover:text-gray-300 transition-colors duration-300"
+          >
+            Categories
           </Link>
           <Link
             href="/contact"

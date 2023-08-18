@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { posts } from "@/posts";
+import { getPosts } from "@/lib/posts";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -8,10 +8,12 @@ export const metadata: Metadata = {
   description: "This is all the Blog Posts in my Barrage",
 };
 
-export default function PostsPage() {
+export default function BlogPage() {
+  const posts = getPosts();
+
   return (
     <div className="px-4 py-8 md:px-8">
-      <h2 className="text-4xl font-bold text-center mb-6">Posts Page</h2>
+      <h2 className="text-4xl font-bold text-center mb-6">All Posts</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map((post) => {
           return (
@@ -22,7 +24,7 @@ export default function PostsPage() {
               <p className="text-gray-600 text-center">Date: {post.date}</p>
               <div className="flex-grow">
                 <h3 className="text-lg font-semibold mb-2">
-                  <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h3>
                 <div className="flex justify-center items-center">
                   <div className="w-20 h-20">
@@ -35,6 +37,7 @@ export default function PostsPage() {
                     />
                   </div>
                 </div>
+                <div className="text-xs">{`category: ${post.category}`}</div>
               </div>
             </div>
           );

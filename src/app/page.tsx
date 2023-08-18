@@ -13,7 +13,7 @@ export default function Home() {
       ></div>
       <div className="relative z-10 text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-6 px-4 py-8">
-          This is the Homepage for my-blog-site
+          BlogZILLA Cometh...
         </h2>
       </div>
     </main>
