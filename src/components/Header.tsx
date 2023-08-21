@@ -6,7 +6,7 @@ export default function Header() {
       <h1 className="text-4xl md:text-5xl font-serif text-white md:hover:text-green-500 transition-colors duration-300">
         blog<span className="text-red-500">ZILLA</span>
       </h1>
-      <nav className="flex space-x-4 md:space-x-6 items-center text-sm md:text-base">
+      <nav className="flex space-x-4 md:space-x-6 items-center text-sm md:text-base landscape:text-lg">
         <ul className="flex space-x-4">
           <li>
             <Link
