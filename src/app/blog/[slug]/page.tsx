@@ -2,6 +2,7 @@ import { getPosts, getPostBySlug } from "@/lib/posts";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { kv } from "@vercel/kv";
+import Comments from "@/components/Comments";
 
 type BlogPostParams = {
   params: {
@@ -55,12 +56,12 @@ export default async function IndividualPostPage({ params }: BlogPostParams) {
         <p className="text-gray-600 mt-4">Date: {post.date}</p>
         <p>{`category: ${post.category}`}</p>
         <p>
-          <p>
-            This Post has been viewed by{" "}
-            <span className="text-bold ">{pageViews}</span> humungous pairs of
-            abominable eyeholes
-          </p>
+          This Post has been viewed by{" "}
+          <span className="text-bold text-black">{pageViews}</span> humungous
+          pairs of abominable eyeholes
         </p>
+        {/* @ts-ignore */}
+        <Comments slug={params.slug} />
       </article>
     </div>
   );
